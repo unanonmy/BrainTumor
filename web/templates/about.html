@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/web.css" />
+    <style>
+        .navbar-nav .active {
+            background-color: black;
+        }
+        a:active {
+            background-color: #0000FF;
+            color: white;
+        }   
+        a:focus{
+            background-color:black;
+        }
+        h3{
+            font-family: Verdana;
+            text-align: center;
+            color:maroon;
+            font-style: bold; 
+        }
+        .navbar  {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin: 0 0 0 1.5rem;
+        }
+        .logo a {
+        color: white;
+        }
+
+        .logo a, .navigation a {
+        text-decoration: none;
+        }
+
+        .navigation  {
+        display: flex;
+        justify-content: flex-end;
+        }
+
+        .navigation a {
+        display: block;
+        padding: 1em;
+        }
+
+        .navigation a:hover {
+        background: #00ace6;
+        }
+        .nav-item{
+            padding:0 1.3rem;
+        }
+        .nav-link{
+            color:white !important;
+        }
+        body{
+            padding-top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark">
+        <h3 class="logo"><a href="{{url_for('home')}}">Brain App</a></h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end navigation">
+                <li class="nav-item">
+                    <a class="nav-link"  href="{{url_for('home')}}" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('prediction')}}">Predict</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+	<h2 class="text-center" style="color:maroon; margin-top:40px; margin-bottom:40px ;font-family:georgia">Brain Tumor Detection and Classification</h2>
+	<div id="mot">
+		<h4 align="center">Motivation</h4>
+		<div class="container">
+			<p>
+				The main motivation behind Brain tumor detection is to not only detect tumor but it can
+also classify types of tumor. So it can be useful in cases such as we have to sure the tumor
+is positive or negative, it can detect tumor from image and return the result tumor is
+positive or not. This project deals with such a system, which uses computer, based
+procedures to detect tumor blocks and classify the type of tumor using Generative Adversarial Networks and  Convolution
+Neural Network Algorithm for MRI images of different patients. 
+			</p>
+		</div>
+		<h4 align="center">Normal Brain vs Tumor Brain</h4>
+		<div class="container">
+			<center><img src="{{url_for('static',filename='img2.jpg')}}" style="width:100% ;height:80vh" ></center>
+		</div>
+		<h4 id="intro" align="center">About Brain Tumor</h4>
+		<div class="container">
+			<p>
+				A cancerous or non-cancerous mass or growth of abnormal cells in the brain is known as brain tumor . These tumors can start in the brain or elsewhere in the body and can spread to the brain . Symptoms of brain tumour includes increasing headache , blurred vision , loss of balance,confusion and seizures. There is always need of advancement when it comes to medical imaging. Early detection is a way to control the brain tumor. There are many cases that are handled by the early detection and decrease the death rate.
+			</p>
+			<p>
+				There are different types of brain tumor and they are<br>
+				<ol>
+					<li>Glioma</li>
+					<li>Meningioma</li>
+					<li>Pituitary Tumor</li>
+				</ol>
+				<p>Brain Tumor can be both benign and malignant.Among the different tumor types ,Meningioma is Benign and Glioma is Malignant and Pituitary tumor is very rarely found.</p>
+				<p>Glioma is a type of tumor that occurs in the brain and spinal cord. Gliomas begin in the gluey supportive cells (glial cells) that surround nerve cells and help them function.</p>
+				<p>A meningioma is a primary central nervous system (CNS) tumor. This means it begins in the brain or spinal cord. Overall, meningiomas are the most common type of primary brain tumor.</p>
+				<p>A pituitary tumor is a tumor that forms in the pituitary gland near the brain that can cause changes in hormone levels in the body. This illustration shows a smaller tumor (microadenoma). Pituitary tumors are abnormal growths that develop in your pituitary gland.</p>
+
+
+			</p>
+			
+		</div>
+		<h4 id="probst" align="center">Problem Statement</h4>
+		<div class="container">
+			Brain Tumor detection and classification is vital as a health indicator. This model takes MRI images as input and classifies them into different brain tumor classes.MRI is mainly used to get images of the human body and cancerous tissues because of its high resolution and better quality and less radiation.
+			Through this model,the patient will be able to know the stage of brain tumor the patient is in .
+
+
+		</div>
+		<br>
+
+		<h4 id="litsur" align="center"> Literature Survey</h4>
+		<div class="container">
+			<h5 style="color:blue">Survey - I :</h5>
+			<p>
+				<b>Identification of Brain Tumor using Image Processing Techniques</b>
+ <p><b>AUTHOR : </b>Gamage P.T. Faculty of Information Technology, University of Moratuwa</p>
+ <p><b>Techniques Used  : </b>Image Processing</p>
+ <p><b>Features : </b>Shape,Size and location of the tumor</p>
+ <p><b>Limitations : </b> Only detects  whether tumor is present or not but
+Cannot classify the tumor into different classes</p>
+
+
+</p>
+
+				
+		
+			<h5 style="color:blue">Survey - II :</h5>
+			<p>
+				<b>Classification of Brain Tumors from MRI Images Using a Convolutional Neural Network
+</b>
+ <p><b>AUTHOR : </b>Milica M. Badža 1,2 and Marko C. Barjaktarovi 2 1 Innovation center, School of Electrical Engineering, University of Belgrade, Bulevar kralja Aleksandra 73, 11000 Belgrade, Serbia 2 School of Electrical Engineering, University of Belgrade, Bulevar kralja Aleksandra 73, 11000 Belgrade, Serbia; mbarjaktarovic@etf.bg.ac.rs</p>
+ <p><b>Techniques Used  : </b>Deep Learning and Convolutional Neural Network</p>
+ <p><b>Features : </b>Shape,Size and location of the tumor</p>
+ <p><b>Limitations : </b> Overfitting due to insufficient dataset and
+Cannot classify the tumor into different classes
+</p>
+
+
+</p>
+<br>
+		</div>
+		<h4 id="prowor" align="center">Proposed Work</h4>
+		<div class="container">
+			<p>Various techniques have been developed by researchers to detect brain tumor. 
+			Main methods used for developing this model are <b>CNN</b> and <b>GAN</b></p>
+			<p>GAN is used for unsupervised learning and is
+used to copy and capture variations in dataset.
+ GAN can be used to generate data when there is no enough data and it
+mainly consists of Generator and Discriminator.</p><p>
+CNN is mainly used for analysing images,data analysis and data classification and detecting patterns.
+CNN mainly consists of Convolutional Layer,
+Max Pooling Layer,
+Fully Connected Layer
+ .</p>
+
+
+
+
+<br>
+			<br />
+			<br />
+			<br />
+		</div>
+	</div>
+
+</body>
+<html>
+				

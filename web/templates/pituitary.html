@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Pituitary</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .cardd{
+                border: solid;
+                padding:10px;
+                width: 50%;
+                border-radius: 5px;
+                display: none;
+            }
+            button{
+                margin:20px;
+            }
+            body{
+                padding-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+                var p = document.getElementById("bx");
+                p.style.display = p.style.display == "block" ? "none" : "block";
+            }
+        </script>
+        <center>
+            <h3>You Have Pituitary Tumor</h3><br>
+            <a class="btn btn-primary" href="{{url_for('prediction')}}">Predict</a>
+            <button class="btn btn-primary" type="button" id="cl">Know More</button>
+            <div class="cardd" id="bx">
+                <p>The pituitary gland is a small, pea-sized organ in the brain. Most pituitary tumors are benign</p>
+                <p>Symptoms vary depending on the type of tumor and the affected area of the pituitary gland.</p>
+                <p> Your health care provider may order blood and urine tests, CT scan, MRI, or biopsy to diagnose the tumor.</p>
+                <p>Treatment may include surgery, radiation therapy, or medication.</p>
+            </div>
+            <script>
+                document.getElementById("cl").addEventListener("click",myFunction);
+            </script>
+        </center>
+    </body>
+</html>

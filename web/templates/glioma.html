@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Glioma</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .cardd{
+                border: solid;
+                padding:10px;
+                width: 50%;
+                border-radius: 5px;
+                display: none;
+            }
+            button{
+                margin:20px;
+            }
+            body{
+                padding-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+                var p = document.getElementById("bx");
+                p.style.display = p.style.display == "block" ? "none" : "block";
+            }
+        </script>
+        <center>
+            <h3>You Have Glioma Tumor</h3><br>
+            <a class="btn btn-primary" href="{{url_for('prediction')}}">Predict</a>
+            <button class="btn btn-primary" type="button" id="cl">Know More</button>
+            <div class="cardd" id="bx">
+                <p>Glioma is a common type of tumor originating in the brain. About 33 percent of all brain tumors are gliomas, which originate in the glial cells that surround and support neurons in the brain, including astrocytes, oligodendrocytes and ependymal cells.</p>
+                <p>There are different grades of gliomas, indicating their growth potential and aggressiveness.</p>
+                <p> This group of tumors includes glioblastomas. Glioblastoma symptoms may be similar to those of other gliomas.</p>
+            </div>
+            <script>
+                document.getElementById("cl").addEventListener("click",myFunction);
+            </script>
+        </center>
+    </body>
+</html>
